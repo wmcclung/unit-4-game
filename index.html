@@ -18,95 +18,83 @@
     
 </head>
 <body>
-    
-<div class="jumbotron">
-    <h2>Crystal Collector!</h2>
-</div>
-
-<div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                
-                
-    
-                        <h2>Instructions</h2>
-            <p>
-You will be given a random number at the start of the game.
-
-There are 4 crystals below. by clicking on a crystal you will add a specific amount of points to your total score
-            </p>
-            <p>
-                you win the game by matching your total score to random number, you lose the game if your total score goes above the random number
-
-The value of each crystal is hidden from you until you click on it
-
-Each time when the game starts, the game will change values of each crystal. </p>
-
-
-
-</div>
-<div class="col-md-6 target-number">
-    <h1>target number:</h1>
-
-    </div>
-</div>
-    <div class="row">
-            <div class="col-md-6 wins-losses">
-                    <p>wins</p>
-                    <p>Losses</p> 
-            </div>
+    <div class="container">
         
-            <div class="col-md-6 current-score">
-                <p>Current score</p>
-                
+      
+        <div class="row">
+
+         
+            <div class="col-lg-6 col-md-7 col-sm-8 col-xs-12" id="row1col1">
+            <h1>Crystal Collector!</h1>     
             </div>
+        </div>
+
+        
+        <div class="row">
+
+            <!-- instructions-->
+            <div class="col-lg-6 col-md-8 col-sm-8 col-xs-12" id="row2col1">
+                <p>You will be given a random number at the start of the game.</p>
+                <br>
+                <p>There are 4 crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <br>
+                <p>You win the game by matching your total score to the random number.  You lose the game if your total score goes above the random number.</p>
+                <br>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <br>
+                <p>Each time when the game starts, the game will change the value of each crystal
+                </p>
             </div>
-            <div class="computerNum">
-            <div class="row">
-                    <div class="image-container">
-                            <div class="redGem">
-                    <div class="col-md-3 dog">
-                        <img src="assets/images/dog.jpg" height="250px" width="250px">
-                    </div>
-                    <div class="col-md-3 swan">
-                            <img src="assets/images/swan.jpg" height="250px" width="250px">
-                        </div>
-                        <div class="col-md-3 pig">
-                                <img src="assets/images/pig.jpg" height="250px" width="250px">
-                            </div>
-                            <div class="col-md-3 fish">
-                                    <img src="assets/images/fish.jpg" height="250px" width="250px">
-                                </div>
-                                </div>
-                            </div>
+         </div>
 
+        
+        <div class="row">
 
+            <!-- random number -->
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6" id="row3col1">
+                <p><span id="random_number"></span></p>
+                <br><br>
+            </div>
 
- <!--Need Header Crystal Collector  Here's how the app works:
- There will be four crystals displayed as buttons on the page.
-            The player will be shown a random number at the start of the game.
-            
-            When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
-            
-            Your game will hide this amount until the player clicks a crystal.
-            When they do click one, update the player's score counter.
-            The player wins if their total score matches the random number from the beginning of the game.
-            
-            The player loses if their score goes above the random number.
-            
-            The game restarts whenever the player wins or loses.
-            
-            When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-            The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+            <!-- wins losses -->
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="row3col2">
+                <p>Wins: <span id="userWins"></span></p>
+                <p>Losses: <span id="userLosses"></span></p>
+                <br>
+            </div>
+        </div>
 
-Option 1 Game design notes
+       
+        <div class="row">
 
-The random number shown at the start of the game should be between 19 - 120.
+            <!--crystals -->
+            <div class="col-lg-8 col-md-8 col-sm-11 col-xs-12" id="row4col1">
+                <img src="./assets/images/dog.jpg"  alt="dog" class="crystal-image" id="dog">
+                <img src="./assets/images/fish.jpg"  alt="fish" class="crystal-image" id="fish">
+                <img src="./assets/images/pig.jpg"  alt="pig" class="crystal-image" id="pig">
+                <img src="./assets/images/swan.jpg"  alt="swan" class="crystal-image" id="swan">
+            </div>
+        </div>
 
-Each crystal should have a random hidden value between 1 - 12.-->
-    <!--jquery-->
-    
-    <!--link my java file-->
+       
+        <div class="row">
+
+            <!-- total score -->
+            <div class="col-lg-5 col-md-5 col-sm-8 col-xs-10" id="row5col1">
+                <p>Your total score is: </p>  
+            </div>
+        </div>
+
+        
+        <div class="row">
+
+            <!--user's  score -->
+            <div class="col-lg-5 col-md-5 col-sm-8 col-xs-10" id="row6col1">
+                <p><span id="totalScore"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
     <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
     <script src="assets/javascript/game.js"></script>
 </body>
